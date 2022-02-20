@@ -1,1 +1,10 @@
-prout
+<h1>Liste des articles</h1>
+
+<ul>
+<% @articles.each do |article| %>
+  <li><%= article.title %></li>
+  <p><%= article.content %></p>
+  <%= link_to "Regarder l'article", article_path(article.id), class: "btn btn-primary"%>
+  <%= link_to "Editer l'article" , edit_article_path(article.id) , class: "btn btn-danger"%>
+<% end %>
+</ul>

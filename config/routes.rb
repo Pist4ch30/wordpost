@@ -1,6 +1,6 @@
 Rails.application.routes.draw do
   get 'pages/home'
   # For details on the DSL available within this file, see https://guides.rubyonrails.org/routing.html
-  root to: 'articles#index'
-  get '/post(/:title)', to: 'articles#post', as: 'post'
+  root to: 'pages#home'
+  resources :articles
 end

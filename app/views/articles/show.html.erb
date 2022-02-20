@@ -1,0 +1,5 @@
+<h1><%= @article.title %></h1>
+
+
+<%= link_to "Retourner au Articles =>", articles_path, class: "btn btn-primary" %>
+<%= link_to "Editer l'article" , edit_article_path(@article.id) , class: "btn btn-danger"%>
